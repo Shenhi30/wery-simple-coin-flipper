@@ -21,23 +21,19 @@ import { useEffect, useState } from "react";
 
   type ImageKey = keyof typeof imageMap
 
-
-
 export default function Home() {
   const [activeKey, setActiveKey] = useState<ImageKey>(1)
-  const [isMounted, setIsMounted] = useState(false)
-
-  useEffect(() => {
-    setIsMounted(true)
-    randomiseSide()
-  }, [])
 
   const randomiseSide = () => {
     const randomNum = (Math.floor(Math.random() * 2) + 1) as ImageKey
     setActiveKey(randomNum)
   }
 
-  if (!isMounted) return null
+  useEffect(() => {
+    randomiseSide()
+  }, [])
+
+  if (activeKey === null) return null
   
   const imageCurrent = imageMap[activeKey]
 
