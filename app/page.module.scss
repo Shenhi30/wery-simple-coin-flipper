@@ -1,0 +1,42 @@
+@import "../styles/variebles.scss";
+
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .header {
+        font-size: 64px;
+        font-weight: 800;
+        color: $text-white;
+        -webkit-text-stroke: 4px black;
+    }
+
+    .text{
+        color: $text-white;
+    }
+    
+    .coinBtn {
+        margin-top: 32px;
+        cursor: pointer;
+    }
+    
+    .result {
+        color: $text-white;
+        margin-top: 24px;
+        margin-bottom: 48px;
+    }
+    
+    .btn {
+        border-radius: 12px;
+        padding: 16px;
+        font-size: 24px;
+        color: $text-white;
+        background-color: $border-blue;
+        border: 1px solid $border-blue;
+        cursor: pointer;
+    }
+}
+

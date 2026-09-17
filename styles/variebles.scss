@@ -1,0 +1,24 @@
+
+
+$bg-color: #3F4B5F;
+$border-blue: #2357b1;
+$text-white:#ffffff;
+
+
+
+
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
