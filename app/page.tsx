@@ -28,9 +28,7 @@ export default function Home() {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true)
-    // eslint-disable-next-line react-hooks/immutability
     randomiseSide()
   }, [])
 
